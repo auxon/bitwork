@@ -17,8 +17,8 @@ class Bitwork {
     // RPC
     const rpcconfig = Object.assign({
       protocol: "http",
-      host: "127.0.0.1",
-      port: "8332",
+      host: "miner.entangleIT.com",
+      port: "80",
     }, (gene && gene.rpc ? gene.rpc : {}))
     this.rpc = new RpcClient(rpcconfig)
 

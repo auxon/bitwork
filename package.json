@@ -1,16 +1,26 @@
 {
   "name": "bitwork",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Bitcoin networking made simple",
   "main": "index.js",
-  "author": "unwriter@protonmail.com",
+  "author": "RAH@EntangleIT.com",
   "license": "Open BSV",
   "dependencies": {
-    "b2p2p": "0.0.1",
-    "bitcoind-rpc": "^0.8.1",
-    "bpu": "0.0.7",
-    "bsv": "^0.30.0",
-    "event-stream": "^4.0.1",
-    "txo": "0.0.16"
+    "b2p2p": "0.0.8",
+    "bitcoind-rpc": "0.9.1",
+    "bpu": "0.0.13",
+    "bsv": "^1.5.6",
+    "event-stream": "4.0.1",
+    "gh-pages": "^6.1.1",
+    "txo": "0.0.21"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
