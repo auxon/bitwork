@@ -17,14 +17,14 @@ class Bitwork {
     // RPC
     const rpcconfig = Object.assign({
       protocol: "http",
-      host: "miner.entangleIT.com",
-      port: "80",
+      host: "127.0.0.1",
+      port: "8333",
     }, (gene && gene.rpc ? gene.rpc : {}))
     this.rpc = new RpcClient(rpcconfig)
 
     // PEER
     let m = new Messages({ Block: bsv.Block, BlockHeader: bsv.BlockHeader, Transaction: bsv.Transaction, MerkleBlock: bsv.MerkleBlock })
-    let g = Object.assign({ host: "127.0.0.1", messages: m }, (gene && gene.peer ? gene.peer : {}))
+    let g = Object.assign({ host: "192.168.2.25", messages: m }, (gene && gene.peer ? gene.peer : {}))
     this.peer = new Peer(g)
     this.peer.on("disconnect", function() { console.log("disconnected") })
     this.peer.on("error", function(e) { console.log("Err", e) })
