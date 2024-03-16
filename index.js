@@ -9,8 +9,8 @@ class Bitwork {
     this.request = {}  // request stub
     this.response = {} // response stub
 
-    if (!gene || !gene.rpc || !gene.rpc.user || !gene.rpc.pass) {
-      console.log("Error: please pass 'rpc.user' and 'rpc.pass' attributes when initializing")
+`    if (!gene || !gene.rpc || !gene.rpc.user || !gene.rpc.pass) {
+`      console.log("Error: please pass 'rpc.user' and 'rpc.pass' attributes when initializing")
       process.exit(1)
     }
 
