@@ -9,9 +9,9 @@ class Bitwork {
     this.request = {}  // request stub
     this.response = {} // response stub
 
-`    if (!gene || !gene.rpc || !gene.rpc.user || !gene.rpc.pass) {
-`      console.log("Error: please pass 'rpc.user' and 'rpc.pass' attributes when initializing")
-      process.exit(1)
+    if (!gene || !gene.rpc || !gene.rpc.user || !gene.rpc.pass) {
+      console.log("Error: please pass 'rpc.user' and 'rpc.pass' attributes when initializing");
+      process.exit(1);
     }
 
     // RPC
@@ -24,7 +24,7 @@ class Bitwork {
 
     // PEER
     let m = new Messages({ Block: bsv.Block, BlockHeader: bsv.BlockHeader, Transaction: bsv.Transaction, MerkleBlock: bsv.MerkleBlock })
-    let g = Object.assign({ host: "192.168.2.25", messages: m }, (gene && gene.peer ? gene.peer : {}))
+    let g = Object.assign({ host: "127.0.0.1", messages: m }, (gene && gene.peer ? gene.peer : {}))
     this.peer = new Peer(g)
     this.peer.on("disconnect", function() { console.log("disconnected") })
     this.peer.on("error", function(e) { console.log("Err", e) })
